@@ -3,6 +3,10 @@ import {makeStyles, AppBar, IconButton, Toolbar} from '@material-ui/core';
 import SortIcon from '@material-ui/icons/Sort';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import InstagramIcon from '@material-ui/icons/Instagram';
+
 const useStyles = makeStyles((theme) => ({
 		root:{
 			display:'flex',
@@ -17,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
 		},
 		icon:{
 			color:"#fff",
-			fontSize: '2rem'
+			fontSize: '2rem',
+			margin: '10px'
 		},
 		appbarTitle:{
 			flexGrow: '1',
@@ -59,8 +64,18 @@ export default function Header(){
 											 <span className={classes.colorText}>STFU</span> Crew.
 										</h1>
                     <IconButton>
-                        <SortIcon className={classes.icon}/>
+											<FacebookIcon className={classes.icon}/>
+										</IconButton>
+										<IconButton>
+											<YouTubeIcon className={classes.icon}/>
+										</IconButton>
+										<IconButton>
+											<InstagramIcon className={classes.icon}/>
+										</IconButton>
+										<IconButton>
+											<SortIcon className={classes.icon}/>
                     </IconButton>
+										{/* <h1>About us</h1> */}
                 </Toolbar>
             </AppBar>
 						<Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} 
